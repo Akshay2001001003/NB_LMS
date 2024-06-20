@@ -7,5 +7,12 @@ frappe.ui.form.on("LMS Batch", { //this function makes only select user with rol
             },
         };
     });
-}
+    frm.set_query("user","custom_trainer", function () {
+        return {
+            filters: {
+                role_profile_name:'Trainer'
+            },
+        };
+    });
+},
 });

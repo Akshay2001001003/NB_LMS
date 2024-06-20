@@ -31,7 +31,7 @@ app_license = "mit"
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 doctype_js ={
     "LMS Batch": "public/js/custom_lms_batch.js",
-    "LMS Course": "public/js/custom_lms_course.js"
+    "LMS Course": "public/js/custom_lms_course.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -123,7 +123,8 @@ doctype_js ={
 # }
 override_doctype_class = {
     # "ToDo": "custom_app.overrides.CustomToDo",
-    "Job Opportunity":"nb_lms.overrides.custom_job_opportunity.custom_JobOpportunity"
+    "Job Opportunity":"nb_lms.overrides.custom_job_opportunity.custom_JobOpportunity",
+    "LMS Enrollment":"nb_lms.overrides.custom_lms_enrollment.Custom_LMSEnrollment"
 }
 
 # Document Events
@@ -168,7 +169,7 @@ override_doctype_class = {
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "nb_lms.event.get_events"
+# 	"lms.lms.doctype.lms_assignment_submission.lms_assignment_submission.upload_assignment": "nb_lms.overrides.custom_lms_assignment_submission.custom_upload_assignment"
 # }
 #
 # each overriding function accepts a `data` argument;
@@ -242,7 +243,7 @@ fixtures = [
     {
         "dt": "Custom Field",
         "filters": [
-            ["dt", "in", "Course Chapter"]
+            ["dt", "in",["Course Chapter","LMS Batch"]]
         ]
     }
 ]

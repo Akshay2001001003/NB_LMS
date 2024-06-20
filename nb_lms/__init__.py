@@ -1,1 +1,8 @@
 __version__ = "0.0.1"
+
+from lms.lms.doctype.lms_assignment_submission import lms_assignment_submission
+from lms.lms.utils import has_course_moderator_role
+from nb_lms.customizations.assignment import custom_upload_assignment
+from nb_lms.customizations.custom_permission import custom_has_course_moderator_role
+lms_assignment_submission.upload_assignment=custom_upload_assignment
+has_course_moderator_role=custom_has_course_moderator_role
