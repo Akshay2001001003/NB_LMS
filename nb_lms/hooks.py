@@ -4,12 +4,8 @@ app_publisher = "NestorBird"
 app_description = "skjdkwelkjecs"
 app_email = "ak@gmail.com"
 app_license = "mit"
-app_logo_url = "/assets/nb_lms/images/nb_solid_logo.png"
+app_logo_url ="/assets/nb_lms/images/nb_solid_logo.png"
 
-
-# website_context={
-#     "favicon"
-# }
 # required_apps = []
 
 # Includes in <head>
