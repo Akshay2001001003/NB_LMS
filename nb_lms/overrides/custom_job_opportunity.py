@@ -10,7 +10,6 @@ class custom_JobOpportunity(Document):
     def validate(self):
         self.validate_urls()
         self.company_logo = validate_image(self.company_logo)
-        validate_user()
     def validate_urls(self):
         frappe.utils.validate_url(self.company_website, True)
 @frappe.whitelist()
@@ -32,6 +31,3 @@ def report(job, reason):
         args=args,
         now=True,
     )
-def validate_user():
-    if frappe.session.user != "Instructor":
-        frappe.throw("You are not allowed to create a job", title="Permission Denied")

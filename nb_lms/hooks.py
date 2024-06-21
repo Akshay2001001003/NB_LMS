@@ -4,6 +4,12 @@ app_publisher = "NestorBird"
 app_description = "skjdkwelkjecs"
 app_email = "ak@gmail.com"
 app_license = "mit"
+app_logo_url = "/assets/nb_lms/images/nb_solid_logo.png"
+
+
+# website_context={
+#     "favicon"
+# }
 # required_apps = []
 
 # Includes in <head>
@@ -30,7 +36,6 @@ app_include_css = ["assets/nb_lms/css/custom_desk_style.css"]
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 doctype_js ={
-    "LMS Batch": "public/js/custom_lms_batch.js",
     "LMS Course": "public/js/custom_lms_course.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
